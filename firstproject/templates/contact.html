@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+{% block body %}
+<h1> Contact page </h1>
+<div class="container">
+<form method = "POST">
+{% csrf_token %}
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your Name" name = "name">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your phone number" name = "number">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Another label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your phone description" name = "description">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock body %}
+
